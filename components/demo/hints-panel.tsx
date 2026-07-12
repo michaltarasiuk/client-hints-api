@@ -1,5 +1,3 @@
-import "server-only";
-
 import { ClientHintsBrowserPanel } from "@/components/demo/client-hints-browser-panel";
 import {
   Card,

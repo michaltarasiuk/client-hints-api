@@ -1,9 +1,9 @@
+import { CodeBlock } from "@/components/code-block";
 import { AdaptiveDashboard } from "@/components/demo/adaptive-dashboard";
 import { DemoTabs } from "@/components/demo/demo-tabs";
 import { HintsPanel } from "@/components/demo/hints-panel";
 import { MarkupMetrics } from "@/components/demo/markup-metrics";
 import { TraditionalDashboard } from "@/components/demo/traditional-dashboard";
-import { CodeBlock } from "@/components/code-block";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import dedent from "dedent";
 import { InfoIcon } from "lucide-react";

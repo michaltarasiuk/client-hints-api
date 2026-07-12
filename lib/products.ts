@@ -185,6 +185,6 @@ const productStatusVariants = {
   archived: "outline",
 } as const satisfies Record<ProductStatus, BadgeVariant>;
 
-export function productStatusVariant(status: ProductStatus): BadgeVariant {
+export function productStatusVariant(status: ProductStatus) {
   return productStatusVariants[status];
 }

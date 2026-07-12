@@ -1,5 +1,3 @@
-import "server-only";
-
 import { DesktopDashboard } from "@/components/demo/desktop-dashboard";
 import { MarkupMetricsClient } from "@/components/demo/markup-metrics-client";
 import { MobileDashboard } from "@/components/demo/mobile-dashboard";

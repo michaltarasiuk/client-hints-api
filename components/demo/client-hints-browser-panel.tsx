@@ -24,8 +24,6 @@ class HighEntropyFetchError extends errore.createTaggedError({
   message: "Failed to fetch high-entropy values",
 }) {}
 
-type UaAvailability = "pending" | "unavailable" | "ready";
-
 async function loadHighEntropyValues(): Promise<
   HighEntropyUnavailableError | HighEntropyFetchError | HighEntropyValues
 > {
@@ -40,11 +38,11 @@ async function loadHighEntropyValues(): Promise<
     .catch((cause) => new HighEntropyFetchError({ cause }));
 }
 
-function getUaAvailabilitySnapshot(): UaAvailability {
+function getUaAvailabilitySnapshot() {
   return navigator.userAgentData ? "ready" : "unavailable";
 }
 
-function getUaAvailabilityServerSnapshot(): UaAvailability {
+function getUaAvailabilityServerSnapshot() {
   return "pending";
 }
 

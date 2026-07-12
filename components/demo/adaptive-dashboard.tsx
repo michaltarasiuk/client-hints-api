@@ -1,5 +1,3 @@
-import "server-only";
-
 import { DesktopDashboard } from "@/components/demo/desktop-dashboard";
 import { MobileDashboard } from "@/components/demo/mobile-dashboard";
 import { TraditionalDashboard } from "@/components/demo/traditional-dashboard";
