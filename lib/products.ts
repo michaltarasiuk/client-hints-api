@@ -2,7 +2,7 @@ import type { BadgeVariant } from "@/components/ui/badge";
 
 export type ProductStatus = "active" | "draft" | "archived";
 
-export const productStatuses = [
+export const PRODUCT_STATUSES = [
   "active",
   "draft",
   "archived",
@@ -185,12 +185,12 @@ export const products: Product[] = [
 
 export const categories = [...new Set(products.map((p) => p.category))];
 
-const productStatusVariants = {
+const PRODUCT_STATUS_VARIANTS = {
   active: "default",
   draft: "secondary",
   archived: "outline",
 } as const satisfies Record<ProductStatus, BadgeVariant>;
 
 export function productStatusVariant(status: ProductStatus) {
-  return productStatusVariants[status];
+  return PRODUCT_STATUS_VARIANTS[status];
 }

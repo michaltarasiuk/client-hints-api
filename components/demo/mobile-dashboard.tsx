@@ -12,7 +12,7 @@ import { productStatusVariant, products } from "@/lib/products";
 
 type ProductFilter = "All" | "Active" | "Draft" | "Low stock";
 
-const productFilters = [
+const PRODUCT_FILTERS = [
   "All",
   "Active",
   "Draft",
@@ -33,7 +33,7 @@ export function MobileDashboard() {
       </div>
 
       <div className="flex gap-2 overflow-x-auto pb-1">
-        {productFilters.map((filter) => (
+        {PRODUCT_FILTERS.map((filter) => (
           <Button
             key={filter}
             variant={filter === "All" ? "default" : "outline"}

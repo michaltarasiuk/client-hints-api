@@ -18,7 +18,7 @@ import {
 import {
   categories,
   productStatusVariant,
-  productStatuses,
+  PRODUCT_STATUSES,
   products,
 } from "@/lib/products";
 
@@ -45,7 +45,7 @@ export function DesktopDashboard() {
         </div>
         <div className="space-y-2 border-t pt-3">
           <p className="text-xs text-muted-foreground">Status</p>
-          {productStatuses.map((status) => (
+          {PRODUCT_STATUSES.map((status) => (
             <label
               key={status}
               className="flex items-center gap-2 text-sm capitalize text-muted-foreground"
