@@ -18,8 +18,8 @@ import {
 import {
   categories,
   productStatusVariant,
+  productStatuses,
   products,
-  type ProductStatus,
 } from "@/lib/products";
 
 export function DesktopDashboard() {
@@ -45,21 +45,19 @@ export function DesktopDashboard() {
         </div>
         <div className="space-y-2 border-t pt-3">
           <p className="text-xs text-muted-foreground">Status</p>
-          {(["active", "draft", "archived"] as ProductStatus[]).map(
-            (status) => (
-              <label
-                key={status}
-                className="flex items-center gap-2 text-sm capitalize text-muted-foreground"
-              >
-                <input
-                  type="checkbox"
-                  className="rounded border-input"
-                  readOnly
-                />
-                {status}
-              </label>
-            ),
-          )}
+          {productStatuses.map((status) => (
+            <label
+              key={status}
+              className="flex items-center gap-2 text-sm capitalize text-muted-foreground"
+            >
+              <input
+                type="checkbox"
+                className="rounded border-input"
+                readOnly
+              />
+              {status}
+            </label>
+          ))}
         </div>
         <div className="space-y-2 border-t pt-3">
           <p className="text-xs text-muted-foreground">Price range</p>

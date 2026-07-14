@@ -10,6 +10,15 @@ import {
 } from "@/components/ui/card";
 import { productStatusVariant, products } from "@/lib/products";
 
+type ProductFilter = "All" | "Active" | "Draft" | "Low stock";
+
+const productFilters = [
+  "All",
+  "Active",
+  "Draft",
+  "Low stock",
+] as const satisfies readonly ProductFilter[];
+
 export function MobileDashboard() {
   return (
     <div className="space-y-4">
@@ -24,7 +33,7 @@ export function MobileDashboard() {
       </div>
 
       <div className="flex gap-2 overflow-x-auto pb-1">
-        {["All", "Active", "Draft", "Low stock"].map((filter) => (
+        {productFilters.map((filter) => (
           <Button
             key={filter}
             variant={filter === "All" ? "default" : "outline"}

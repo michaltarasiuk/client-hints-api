@@ -9,6 +9,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
+type UaAvailability = "pending" | "ready" | "unavailable";
+
 interface HighEntropyValues {
   platformVersion?: string;
   architecture?: string;
@@ -24,9 +26,7 @@ class HighEntropyFetchError extends errore.createTaggedError({
   message: "Failed to fetch high-entropy values",
 }) {}
 
-async function loadHighEntropyValues(): Promise<
-  HighEntropyUnavailableError | HighEntropyFetchError | HighEntropyValues
-> {
+async function loadHighEntropyValues() {
   const getHighEntropyValues = navigator.userAgentData?.getHighEntropyValues;
 
   if (!getHighEntropyValues) {
@@ -38,11 +38,11 @@ async function loadHighEntropyValues(): Promise<
     .catch((cause) => new HighEntropyFetchError({ cause }));
 }
 
-function getUaAvailabilitySnapshot() {
+function getUaAvailabilitySnapshot(): UaAvailability {
   return navigator.userAgentData ? "ready" : "unavailable";
 }
 
-function getUaAvailabilityServerSnapshot() {
+function getUaAvailabilityServerSnapshot(): UaAvailability {
   return "pending";
 }
 

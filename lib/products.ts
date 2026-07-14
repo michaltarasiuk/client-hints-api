@@ -2,6 +2,12 @@ import type { BadgeVariant } from "@/components/ui/badge";
 
 export type ProductStatus = "active" | "draft" | "archived";
 
+export const productStatuses = [
+  "active",
+  "draft",
+  "archived",
+] as const satisfies readonly ProductStatus[];
+
 export interface Product {
   id: string;
   name: string;
