@@ -101,7 +101,7 @@ export function MarkupMetricsClient({
             <CardTitle>Client Hints approach</CardTitle>
             <CardDescription>
               {source === "responsive"
-                ? "No hint — falls back to responsive CSS (both variants)"
+                ? "No hint. Falls back to responsive CSS (both variants)"
                 : "Server renders one variant for this device"}
             </CardDescription>
           </CardHeader>
@@ -126,7 +126,7 @@ export function MarkupMetricsClient({
             <CardTitle>Savings on this request</CardTitle>
             <CardDescription>
               {source === "responsive"
-                ? "No Sec-CH-UA-Mobile — responsive CSS fallback"
+                ? "No Sec-CH-UA-Mobile. Responsive CSS fallback"
                 : `Detected as ${device} via ${sourceLabel(source)}`}
             </CardDescription>
           </CardHeader>

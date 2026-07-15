@@ -36,9 +36,9 @@ export default async function Home() {
           Client Hints are Chromium-first; Safari and Firefox have limited
           support. When <code>Sec-CH-UA-Mobile</code> is missing, this demo
           falls back to the Tailwind responsive pattern (both UIs in HTML, hide
-          one with CSS) — same as the traditional tab.{" "}
+          one with CSS), same as the traditional tab.{" "}
           <code>Sec-CH-UA-Mobile</code> reflects browser preference, not just
-          hardware — e.g. &quot;Request Desktop Site&quot; returns{" "}
+          hardware, e.g. &quot;Request Desktop Site&quot; returns{" "}
           <code>?0</code> on a phone. Best for structurally different UIs, not
           subtle responsive tweaks.
         </AlertDescription>
