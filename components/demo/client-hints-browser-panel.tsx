@@ -79,8 +79,8 @@ export function ClientHintsBrowserPanel() {
       } else {
         setHighEntropy(values);
       }
-    } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : String(e));
+    } catch (error) {
+      setError(error instanceof Error ? error.message : String(error));
     } finally {
       setLoading(false);
     }
